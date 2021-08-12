@@ -41,7 +41,12 @@ function bondJSON(data){
 //JSON processing data goes here
 	console.log(data);
 
-	$("#output").text(JSON.stringify(data));
+	let myData = JSON.stringify(data,null,4);
+
+	myData = '<pre>' + myData + '</pre>';
+
+	$("#output").html(myData);
+	//$("#output").text(JSON.stringify(data));
 	
 }
 
